@@ -1,0 +1,250 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%; 
+	overflow: hidden;
+}
+
+/* disable pull-to-refresh */
+/* body {
+	overflow-y: hidden;
+} */
+
+
+.vector{
+	position: absolute;
+	width: 2px;
+	background-color: black;
+	-ms-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	background-color: transparent;
+	/* border-left: 2px dashed red; */
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	perspective: 100px;
+}
+
+#rotationPath{
+	position: absolute;
+	width: 280px;
+	height: 280px;
+	opacity: 0.5;
+	-webkit-border-radius: 1000px;
+	-moz-border-radius: 1000px;
+	border-radius: 1000px;
+	left: 50%;
+	margin-left: -140px;
+	top: 50%;
+	margin-top: -140px;
+	border: 2px  black;
+	-webkit-perspective: 100px;
+	perspective: 100px;
+}
+
+#bottle{
+	position: absolute;
+	left: 50%;
+	margin-left: -43px;
+	top: 50%;
+	margin-top: -170px;
+	-webkit-perspective: 100px;
+	perspective: 100px;
+}
+
+.first-circle {
+	position: relative;
+	height: 100vh;
+	background-image: url(../img/circle_01.png), url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: contain, cover;
+	background-position: 50%;
+	display: none;
+}
+
+.start-screen {
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	-webkit-transition: all 2s; /* Safari */
+	position: relative;
+	transition: all 2s;
+}
+
+.table-screen {
+	height: 400px;
+	width: 400px;
+	border: 4px solid #FAF7B5;
+	text-align: center;
+	background-image: url(../img/chosen-table.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	-webkit-transition: all 2s; /* Safari */
+	position: absolute;
+	top: 50%;
+	margin-top: -200px;
+	left: 50%;
+	margin-left: -200px;
+	transition: all 1s cubic-bezier(0.455, 0.380, 0.270, 1.610);
+	transform: scale(0);
+}
+
+.food-screen {
+	height: 400px;
+	width: 400px;
+	border: 4px solid #FAF7B5;
+	text-align: center;
+	background-image: url(../img/chosen-prize.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	-webkit-transition: all 2s; /* Safari */
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	margin-top: -200px;
+	left: 50%;
+	margin-left: -200px;
+	transition: all 1s cubic-bezier(0.455, 0.380, 0.270, 1.610);
+	transform: scale(0);
+}
+
+.animate-scale {
+	transform: scale(1);
+}
+
+.start-screen {
+	z-index: 999;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.start-screen-logo {
+	width: 700px;
+	height: 500px;
+	background-image: url(../img/screen_01-logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#start,
+#start-food,
+#again,
+#zavrti {
+	background-color: #E51D27;
+	font-family: 'Alfa Slab One', cursive;
+	border: 5px solid #871F1F;
+	color: #FAF89D;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+#zavrti {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	font-size: 40px;
+}
+
+#start {
+	font-size: 75px;
+}
+
+#start-food {
+	font-size: 40px;
+	position: absolute;
+  bottom: 20px;
+}
+
+#again {
+	font-size: 30px;
+	position: absolute;
+  bottom: 4px;
+}
+
+#selected-table {
+	position: absolute;
+	bottom: 90px;
+	font-family: 'Alfa Slab One', cursive;
+	color: #FAF89D;
+	font-size: 70px;
+}
+
+#selected-food {
+	position: absolute;
+	top: 225px;
+	font-family: 'Alfa Slab One', cursive;
+	color: #FAF89D;
+	font-size: 30px;
+	padding: 0 10px;
+	line-height: 1.1;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	width: 390px;
+}
+
+.logo-zavrti {
+	position: absolute;
+	top: 50px;
+	z-index: 9999;
+}
+
+.logo-zavrti-01 {
+	left: 10px;
+}
+
+/* .logo-zavrti-02 {
+	right: 10px;
+} */
+
+.logo-zavrti img {
+	width: 18vw;
+}
+
+/* .how-to {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	z-index: 9999;
+	width: 14vw;
+	font-family: 'Alfa Slab One', cursive;
+	color: #FAF89D;
+}
+
+.how-to h2 {
+	font-size: 28px;
+	letter-spacing: 1px;
+	margin-bottom: 4px;
+	line-height: 1;
+	font-weight: normal;
+}
+
+.how-to h3 {
+	font-family: 'BenchNine', sans-serif;
+	font-weight: 200;
+	font-size: 16px;
+	margin: 2px;
+	letter-spacing: 1px;
+}
+
+.how-to-02 {
+	display: none;
+} */
